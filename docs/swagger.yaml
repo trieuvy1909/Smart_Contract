@@ -1,0 +1,32 @@
+basePath: /api/
+host: localhost:3000
+info:
+  contact:
+    url: http://www.swagger.io/support
+  title: Smart Contract
+paths:
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Đăng nhập bằng email và mật khẩu
+      parameters:
+      - description: email
+        in: body
+        name: email
+        required: true
+        schema:
+          type: string
+      - description: password
+        in: body
+        name: password
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: Đăng nhập
+      tags:
+      - Auth
+swagger: "2.0"
