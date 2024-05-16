@@ -20,6 +20,7 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 
 	userService := services.NewAuthService(db)
 	attendanceService := services.NewAttendanceService(db)
+	//smartContractService := services.NewSmartContractService(db)
 
 	publicGroup := router.Group("/api")
 	privateGroup := router.Group("/api").Use(middlewares.AuthMiddleware())
@@ -35,6 +36,11 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 		privateGroup.GET("/check-out", attendanceService.CheckOut())
 		privateGroup.POST("/attendance-log-filter", attendanceService.AttendanceLogFilter())
 		privateGroup.POST("/attendance-log-detail", attendanceService.AttendanceLogDetail())
+
+
+		//smart contract
+		// privateGroup.GET("/get-value", smartContractService.GetValue())
+		// privateGroup.POST("/set-value", smartContractService.SetValue())
 	}
 	return router
 }

@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "1d3fd719-c78f-4bf6-8f3b-38d0fa8f5be0",
+		"name": "Attendance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18897932",
+		"_collection_link": "https://orange-spaceship-242772.postman.co/workspace/Menu~b33f5e8e-9fec-4052-95a7-be58a2c9ac28/collection/18897932-1d3fd719-c78f-4bf6-8f3b-38d0fa8f5be0?action=share&source=collection_link&creator=18897932"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"trieuvynet03.1909@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"trieuvynet.1909@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Authorization",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6InRyaWV1dnluZXQuMTkwOUBnbWFpbC5jb20iLCJleHAiOjE3MTY0NjIxNjgsImZ1bGxuYW1lIjoiTMOqIFRyaeG7h3UgVuG7tyIsInVzZXJfaWQiOiI0NWU1MjBhMDk0MmI0N2RhODRjMjUzNGUxOTkyN2ZmZSJ9.Lylroj37xYPMZcHLlF7aIJKl4HEy8ioehixSsmnoQyU"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token_localhost=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6InRyaWV1dnluZXQuMTkwOUBnbWFpbC5jb20iLCJleHAiOjE3MTY0NjIxNjgsImZ1bGxuYW1lIjoiTMOqIFRyaeG7h3UgVuG7tyIsInVzZXJfaWQiOiI0NWU1MjBhMDk0MmI0N2RhODRjMjUzNGUxOTkyN2ZmZSJ9.Lylroj37xYPMZcHLlF7aIJKl4HEy8ioehixSsmnoQyU; Path=/; Domain=localhost; Max-Age=604800; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:02:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "505"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": {\n        \"infor\": {\n            \"ID\": \"45e520a0942b47da84c2534e19927ffe\",\n            \"Email\": \"trieuvynet.1909@gmail.com\",\n            \"Password\": \"\",\n            \"Fullname\": \"Lê Triệu Vỷ\",\n            \"Position\": \"Developer\",\n            \"Department\": \"IT\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6InRyaWV1dnluZXQuMTkwOUBnbWFpbC5jb20iLCJleHAiOjE3MTY0NjIxNjgsImZ1bGxuYW1lIjoiTMOqIFRyaeG7h3UgVuG7tyIsInVzZXJfaWQiOiI0NWU1MjBhMDk0MmI0N2RhODRjMjUzNGUxOTkyN2ZmZSJ9.Lylroj37xYPMZcHLlF7aIJKl4HEy8ioehixSsmnoQyU\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"trieuvynet03.1909@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"fullname\":\"Triệu Vỷ 02\",\r\n    \"position\":\"Dev\",\r\n    \"department\":\"IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register đã có tài khoản",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"trieuvynet@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"fullname\":\"Triệu Vỷ 02\",\r\n    \"position\":\"Dev\",\r\n    \"department\":\"IT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:44:41 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Email này đã đăng kí tài khoản\",\n    \"data\": \"\"\n}"
+				},
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"trieuvynet02.1909@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\",\r\n    \"fullname\":\"Triệu Vỷ 02\",\r\n    \"position\":\"Dev\",\r\n    \"department\":\"IT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:45:31 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Đăng kí tài khoản thành công.\",\n    \"data\": {\n        \"ID\": \"9b80dfa2814deab848494791980d7039\",\n        \"Email\": \"trieuvynet02@gmail.com\",\n        \"Password\": \"\",\n        \"Fullname\": \"Triệu Vỷ 02\",\n        \"Position\": \"Dev\",\n        \"Department\": \"IT\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get-user-info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/get-user-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"get-user-info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Chưa đăng nhập",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/get-user-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get-user-info"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:09:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"\",\n    \"message\": \"Bạn chưa đăng nhập, vui lòng đăng nhập lại.\",\n    \"status\": 1\n}"
+				},
+				{
+					"name": "getUserInfo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/get-user-info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"get-user-info"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:09:49 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thông tin tài khoản thành công\",\n    \"data\": {\n        \"ID\": \"45e520a0942b47da84c2534e19927ffe\",\n        \"Email\": \"trieuvynet.1909@gmail.com\",\n        \"Password\": \"\",\n        \"Fullname\": \"Lê Triệu Vỷ\",\n        \"Position\": \"Developer\",\n        \"Department\": \"IT\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6InRyaWV1dnkxQGdtYWlsLmNvbSIsImV4cCI6MTY5MzAyNjQ2NCwiZnVsbG5hbWUiOiJ0cmlldSB2eSIsInVzZXJfaWQiOiI3ZjE0NzIyYjE0Y2Q4MDM5ZjVhNDQ3ZWY2ZTM0ODcwYSJ9.krAkO5pqsu-TS01g1WdmBT0GsB_nQxU-ORe1Hgv5YWo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token_localhost=; Path=/; Domain=localhost; Max-Age=0; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:16:16 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Đăng xuất thành công\",\n    \"data\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "server time",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJlbWFpbCI6InRyaWV1dnkxQGdtYWlsLmNvbSIsImV4cCI6MTY5MzAyNjQ2NCwiZnVsbG5hbWUiOiJ0cmlldSB2eSIsInVzZXJfaWQiOiI3ZjE0NzIyYjE0Y2Q4MDM5ZjVhNDQ3ZWY2ZTM0ODcwYSJ9.krAkO5pqsu-TS01g1WdmBT0GsB_nQxU-ORe1Hgv5YWo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/time",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"time"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "server time",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"time"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:47:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": \"18:47:29 - 16/05/2024\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Check in",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"location\":\"Vinaconex Building - 47 Dien Bien Phu, Da kao, Dictrict 1, Ho Chi Minh city\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/check-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"check-in"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check in",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"location\":\"Vinaconex Building - 47 Dien Bien Phu, Da kao, Dictrict 1, Ho Chi Minh city\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/check-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"check-in"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 11:10:02 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "282"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": {\n        \"ID\": 5,\n        \"UserID\": \"45e520a0942b47da84c2534e19927ffe\",\n        \"CheckIn\": \"2024/05/16 - 18:10:02\",\n        \"CheckOut\": \"\",\n        \"Location\": \"Vinaconex Building - 47 Dien Bien Phu, Da kao, Dictrict 1, Ho Chi Minh city\",\n        \"OverTime\": 0,\n        \"Bonus\": 0,\n        \"Salary\": 0,\n        \"TotalHour\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Check out",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/check-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"check-out"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check out",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/check-out",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"check-out"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 12:37:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "323"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": {\n        \"ID\": 9,\n        \"UserID\": \"0899523aafc8cc44b8c1004ef84c845d\",\n        \"CheckIn\": \"2024/05/16 - 19:37:13\",\n        \"CheckOut\": \"2024/05/16 - 19:37:24\",\n        \"Location\": \"Vinaconex Building - 47 Dien Bien Phu, Da kao, Dictrict 1, Ho Chi Minh city\",\n        \"OverTime\": 0,\n        \"Bonus\": 0,\n        \"Salary\": 0,\n        \"TotalHour\": 0.0030555555555555557\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "AttendanceLogFilter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"user_id\":\"0899523aafc8cc44b8c1004ef84c845d\",\r\n   \"start_time\":\"2024/05/16 - 14:29:24\",\r\n   \"end_time\":\"2024/05/16 - 20:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/attendance-log-filter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"attendance-log-filter"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AttendanceLogFilter",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"user_id\":\"0899523aafc8cc44b8c1004ef84c845d\",\r\n   \"start_time\":\"2024/05/16 - 14:29:24\",\r\n   \"end_time\":\"2024/05/16 - 20:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/attendance-log-filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"attendance-log-filter"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 12:43:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": [\n        {\n            \"ID\": 8,\n            \"UserID\": \"0899523aafc8cc44b8c1004ef84c845d\",\n            \"CheckIn\": \"2024/05/16 - 19:29:24\",\n            \"CheckOut\": \"2024/05/16 - 19:36:57\",\n            \"TotalHour\": 0.12583333\n        },\n        {\n            \"ID\": 9,\n            \"UserID\": \"0899523aafc8cc44b8c1004ef84c845d\",\n            \"CheckIn\": \"2024/05/16 - 19:37:13\",\n            \"CheckOut\": \"2024/05/16 - 19:37:24\",\n            \"TotalHour\": 0.0030555555\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "AttendanceLogDetail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"attendance_id\":8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/attendance-log-detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"attendance-log-detail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AttendanceLogDetail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"attendance_id\":8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/attendance-log-detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"attendance-log-detail"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 May 2024 12:37:48 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "376"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 0,\n    \"message\": \"Thành công\",\n    \"data\": {\n        \"ID\": 8,\n        \"UserID\": \"0899523aafc8cc44b8c1004ef84c845d\",\n        \"Fullname\": \"Triệu Vỷ 02\",\n        \"Position\": \"Dev\",\n        \"Department\": \"IT\",\n        \"CheckIn\": \"2024/05/16 - 19:29:24\",\n        \"CheckOut\": \"2024/05/16 - 19:36:57\",\n        \"Location\": \"Vinaconex Building - 47 Dien Bien Phu, Da kao, Dictrict 1, Ho Chi Minh city\",\n        \"OverTime\": 0,\n        \"Bonus\": 0,\n        \"Salary\": 0,\n        \"TotalHour\": 0.12583333\n    }\n}"
+				}
+			]
+		}
+	]
+}
